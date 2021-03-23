@@ -1,6 +1,7 @@
 <template>
   <div class="login-page">
     <div class="form">
+      <h2>Welcome!</h2>
       <form>
         <input type="text" placeholder="username"/>
         <input type="password" placeholder="password"/>
