@@ -2,6 +2,7 @@
   <div class="container">
     <div>
       <h1 class="title">
+        <a href="#" class="delete-item" @click.prevent="logout">Logout</a>
         Ну приветики =)
       </h1>
     </div>
@@ -9,7 +10,15 @@
 </template>
 
 <script>
-export default {}
+export default {
+  middleware: "authenticated",
+  methods: {
+    logout(){
+      this.$store.commit("removeToken");
+      this.$router.push("/login");
+    },
+  },
+};
 </script>
 
 <style>
@@ -23,16 +32,8 @@ export default {}
 }
 
 .title {
-  font-family:
-    'Quicksand',
-    'Source Sans Pro',
-    -apple-system,
-    BlinkMacSystemFont,
-    'Segoe UI',
-    Roboto,
-    'Helvetica Neue',
-    Arial,
-    sans-serif;
+  font-family: "Quicksand", "Source Sans Pro", -apple-system, BlinkMacSystemFont,
+    "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
   display: block;
   font-weight: 300;
   font-size: 100px;
