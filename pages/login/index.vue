@@ -20,31 +20,31 @@
 
 <script>
 export default {
-  data(){
+  data () {
     return {
       login: {
-        username: "",
-        password: "",
-      },
-    };
+        username: '',
+        password: ''
+      }
+    }
   },
   methods: {
-    async userLogin() {
+    async userLogin () {
       if (this.login.username && this.login.password) {
         try {
-          const response = await this.$axios.$get("/login_user.json");
-          console.log(response);
-          if (this.login.username === response.username && this.login.password === response.password){
-            this.$store.commit("addToken", response.token)
-            this.$router.push("/");
+          const response = await this.$axios.$get('/login_user.json')
+          console.log(response)
+          if (this.login.username === response.username && this.login.password === response.password) {
+            this.$store.commit('addToken', response.token)
+            this.$router.push('/')
           }
         } catch (err) {
-          console.log(err);
+          console.log(err)
         }
       }
-    },
-  },
-};
+    }
+  }
+}
 </script>
 
 <style scoped>
@@ -53,6 +53,7 @@ export default {
   padding: 8% 0 0;
   margin: auto;
 }
+
 .form {
   position: relative;
   z-index: 1;
@@ -63,6 +64,7 @@ export default {
   text-align: center;
   box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
 }
+
 .form input {
   font-family: "Roboto", sans-serif;
   outline: 0;
@@ -74,6 +76,7 @@ export default {
   box-sizing: border-box;
   font-size: 14px;
 }
+
 .form button {
   font-family: "Roboto", sans-serif;
   text-transform: uppercase;
@@ -88,16 +91,19 @@ export default {
   transition: all 0.3 ease;
   cursor: pointer;
 }
+
 .form button:hover,
 .form button:active,
 .form button:focus {
   background: #43a047;
 }
+
 .form .message {
   margin: 15px 0 0;
   color: #b3b3b3;
   font-size: 12px;
 }
+
 body {
   background: #76b852; /* fallback for old browsers */
   background: -webkit-linear-gradient(right, #76b852, #8dc26f);
