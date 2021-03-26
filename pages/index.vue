@@ -73,7 +73,7 @@
                   <h2>Привет)</h2>
                   <a class="close" href="#">&times;</a>
                   <div class="content">
-                    Заботливый Максим, ожидая пока жена соберется решил по быстрону сделать pop-up.
+                    Заботливый Максим, ожидая пока жена соберется, решил по быстрому сделать pop-up.
                     Дальше сам застилизуешь)
                   </div>
                 </div>
@@ -280,13 +280,8 @@ table th {
 }
 
 .box {
-  width: 40%;
-  margin: 0 auto;
   background: rgba(255,255,255,0.2);
-  padding: 35px;
   border: 2px solid #fff;
-  border-radius: 20px/50px;
-  background-clip: padding-box;
   text-align: center;
 }
 
