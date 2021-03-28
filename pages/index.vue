@@ -72,7 +72,7 @@
                 <div class="popup">
                   <h2>EDIT MODE</h2>
                   <a class="close" href="#">&times;</a>
-                  <div class="content">
+                  <div class="content" >
                     FIRST NAME
                     <input id="name" type="text" value=""><br />
                     LAST NAME
@@ -162,6 +162,10 @@ export default {
 </script>
 
 <style>
+input{
+  display:block;
+  margin:0 auto;
+}
 
 header {
   background-color: whitesmoke;
@@ -379,6 +383,7 @@ table th {
 .popup .content {
   max-height: 30%;
   overflow: auto;
+
 }
 
 @media screen and (max-width: 700px){
