@@ -65,30 +65,74 @@
             </td>
             <td data-label="Edit">
               <button class="box">
-                <a class="button" href="#popup1">&#128395;</a>
+                <a
+                  class="button"
+                  :href="'#popup1' + obj.id"
+                >&#128395;</a>
               </button>
-
-              <div id="popup1" class="overlay">
-                <div class="popup">
-                  <h2>EDIT MODE</h2>
-                  <a class="close" href="#">&times;</a>
-                  <div class="content" >
-                    FIRST NAME
-                    <input id="name" type="text" value=""><br />
-                    LAST NAME
-                    <input id="lastname" type="text" value=""><br />
-                    EMAIL
-                    <input id="email" type="number" value=""><br />
-                    SEX
-                    <input id="sex" type="tel" value="" /><br />
-                    ID
-                    <input id="is" type="email" value="" /><br />
-                    IP
-                    <input id="ip" type="email" value="" /><br />
-                    <button>SAVE</button>
-                  </div>
-                </div>
+              <div :id="'popup1' + obj.id" class="overlay">
+            <div class="popup">
+              <h2>EDIT MODE</h2>
+              <a class="close" href="#">&times;</a>
+              <div class="content">
+                <form @submit.prevent="updateItem(obj.id)">
+                  <input
+                    v-model.number="obj.id"
+                    type="hidden"
+                    value=""
+                    readonly
+                  />
+                  <label>FIRST NAME</label>
+                  <input
+                    v-model.trim="obj.first_name"
+                    type="text"
+                    value=""
+                    required
+                  />
+                  <label>LAST NAME</label>
+                  <input
+                    v-model.trim="obj.last_name"
+                    type="text"
+                    value=""
+                    required
+                  />
+                  <label>EMAIL</label>
+                  <input
+                    v-model="obj.email"
+                    type="email"
+                    value=""
+                    required
+                  />
+                  <label>Gender</label>
+                  <input
+                    v-model="obj.gender"
+                    name="gender"
+                    type="radio"
+                    :checked="obj.gender == gender.fimale"
+                    v-bind:value="Female"
+                  />
+                  <input
+                    v-model="obj.gender"
+                    name="gender"
+                    type="radio"
+                    :checked="obj.gender == gender.gender"
+                    v-bind:value="Male"
+                  />
+                  <label>IP</label>
+                  <input
+                    v-model="obj.ip_address"
+                    type="text"
+                    minlength="7"
+                    maxlength="15"
+                    size="15"
+                    pattern="^((\d{1,2}|1\d\d|2[0-4]\d|25[0-5])\.){3}(\d{1,2}|1\d\d|2[0-4]\d|25[0-5])$"
+                    required
+                  />
+                  <button type="submit">SAVE</button>
+                </form>
               </div>
+            </div>
+          </div>
             </td>
             <td data-label="Delete">
               <button
@@ -121,7 +165,7 @@
       >
         +
       </button>
-      <p>Страница {{ page + 1 }}</p>
+      <p>Page {{ page + 1 }}</p>
     </div>
   </div>
 </template>
@@ -133,7 +177,11 @@ export default {
     return {
       objects: [],
       subarray: [],
-      page: 0
+      page: 0,
+      gender: {
+        male: 'Male',
+        female: 'Female'
+      }
     }
   },
   async created () {
@@ -156,6 +204,14 @@ export default {
         console.log(this.objects.id)
         // нужно доделать удаление
       }
+    },
+    updateItem (id) {
+      this.objects.find((element, index, array) => {
+        if (element.id === id) {
+          array[index] = this.user
+        }
+        return element
+      })
     }
   }
 }
