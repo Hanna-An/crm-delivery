@@ -67,6 +67,7 @@ export default {
 </script>
 
 <style scoped>
+
 .login-page {
   width: 360px;
   padding: 8% 0 0;

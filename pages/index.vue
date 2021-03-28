@@ -2,14 +2,14 @@
   <div class="container">
     <header>
       <div class="text-vcenter">
-        <a href="#" class="delete-item" @click.prevent="logout">Logout &#128682;</a>
+        <a href="#" class="delete-item glo" @click.prevent="logout">Logout</a>
       </div>
     </header>
     <div
       v-if="subarray.length > 0"
     >
     </div>
-    <div>
+    <div class="container">
       <table>
         <caption>User table</caption>
         <thead>
@@ -70,11 +70,22 @@
 
               <div id="popup1" class="overlay">
                 <div class="popup">
-                  <h2>Привет)</h2>
+                  <h2>EDIT MODE</h2>
                   <a class="close" href="#">&times;</a>
                   <div class="content">
-                    Заботливый Максим, ожидая пока жена соберется, решил по быстрому сделать pop-up.
-                    Дальше сам застилизуешь)
+                    FIRST NAME
+                    <input id="name" type="text" value=""><br />
+                    LAST NAME
+                    <input id="lastname" type="text" value=""><br />
+                    EMAIL
+                    <input id="email" type="number" value=""><br />
+                    SEX
+                    <input id="sex" type="tel" value="" /><br />
+                    ID
+                    <input id="is" type="email" value="" /><br />
+                    IP
+                    <input id="ip" type="email" value="" /><br />
+                    <button>SAVE</button>
                   </div>
                 </div>
               </div>
@@ -169,6 +180,26 @@ header {
 .delete-item {
   color: black;
   text-decoration: none;
+}
+a.glo{
+  color:#00c6ff;
+  padding: 15px 20px;
+  text-transform: uppercase;
+  width:150px;
+  text-decoration:none;
+  text-align:center;
+  margin-left: 85%;
+  display: block;
+  background-image: linear-gradient(to left,transparent,transparent 50%,#00c6ff 50%,#00c6ff);
+  background-position: 100% 0;
+  background-size: 200% 100%;
+  transition: all .25s ease-in;
+  font: 400 18px tahoma;
+  border: 1px solid #00C6FF;
+}
+a.glo:hover {
+  background-position: 0 0;
+  color:#fff;
 }
 
 .container {
@@ -286,11 +317,19 @@ table th {
 }
 
 .button {
-  font-size: 17px;
-  color: #fff;
+
+  display: inline-block;
+  width: 1.5em;
+  height: 1.5em;
+  vertical-align: middle;
   text-decoration: none;
-  cursor: pointer;
-  transition: all 0.3s ease-out;
+  border: .5em solid rgba(0,0,0,0);
+  border-radius: 100%;
+  background: rgb(245,245,245) linear-gradient(rgb(245,245,245), rgb(188,192,193)) 50% 50% / calc(1.5em + .5em*2) calc(1.5em + .5em*2);
+  box-shadow:
+    inset 0 -3px 10px rgba(255,255,255,1),
+    inset 0 3px 10px rgba(0,0,0,.4),
+    0 2px 4px rgba(0,0,0,.9);
 }
 
 .overlay {
