@@ -4,7 +4,7 @@ export default {
 
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    title: 'apiTAsk',
+    title: 'crm-for-products-delivery',
     htmlAttrs: {
       lang: 'en'
     },

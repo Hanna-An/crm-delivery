@@ -13,136 +13,136 @@
       <table>
         <caption>User table</caption>
         <thead>
-          <tr>
-            <th scope="col">
-              First name
-            </th>
-            <th scope="col">
-              Last name
-            </th>
-            <th scope="col">
-              Email
-            </th>
-            <th scope="col">
-              Sex
-            </th>
-            <th scope="col">
-              Id
-            </th>
-            <th scope="col">
-              IP
-            </th>
-            <th scope="col">
-              Edit
-            </th>
-            <th scope="col">
-              Delete
-            </th>
-          </tr>
+        <tr>
+          <th scope="col">
+            First name
+          </th>
+          <th scope="col">
+            Last name
+          </th>
+          <th scope="col">
+            Email
+          </th>
+          <th scope="col">
+            Sex
+          </th>
+          <th scope="col">
+            Id
+          </th>
+          <th scope="col">
+            IP
+          </th>
+          <th scope="col">
+            Edit
+          </th>
+          <th scope="col">
+            Delete
+          </th>
+        </tr>
         </thead>
         <tbody>
-          <tr
-            v-for="(obj, index) in subarray[page]"
-            :key="index + obj.id"
-          >
-            <td data-label="Id">
-              {{ obj.id }}
-            </td>
-            <td data-label="First name">
-              {{ obj.first_name }}
-            </td>
-            <td data-label="Last name">
-              {{ obj.last_name }}
-            </td>
-            <td data-label="Email">
-              {{ obj.email }}
-            </td>
-            <td data-label="Sex">
-              {{ obj.gender }}
-            </td>
-            <td data-label="IP">
-              {{ obj.ip_address }}
-            </td>
-            <td data-label="Edit">
-              <button class="box">
-                <a
-                  class="button"
-                  :href="'#popup1' + obj.id"
-                >&#128395;</a>
-              </button>
-              <div :id="'popup1' + obj.id" class="overlay">
-            <div class="popup">
-              <h2>EDIT MODE</h2>
-              <a class="close" href="#">&times;</a>
-              <div class="content">
-                <form @submit.prevent="updateItem(obj.id)">
-                  <input
-                    v-model.number="obj.id"
-                    type="hidden"
-                    value=""
-                    readonly
-                  />
-                  <label>FIRST NAME</label>
-                  <input
-                    v-model.trim="obj.first_name"
-                    type="text"
-                    value=""
-                    required
-                  />
-                  <label>LAST NAME</label>
-                  <input
-                    v-model.trim="obj.last_name"
-                    type="text"
-                    value=""
-                    required
-                  />
-                  <label>EMAIL</label>
-                  <input
-                    v-model="obj.email"
-                    type="email"
-                    value=""
-                    required
-                  />
-                  <label>Gender</label>
-                  <input
-                    v-model="obj.gender"
-                    name="gender"
-                    type="radio"
-                    :checked="obj.gender == gender.fimale"
-                    v-bind:value="Female"
-                  />
-                  <input
-                    v-model="obj.gender"
-                    name="gender"
-                    type="radio"
-                    :checked="obj.gender == gender.gender"
-                    v-bind:value="Male"
-                  />
-                  <label>IP</label>
-                  <input
-                    v-model="obj.ip_address"
-                    type="text"
-                    minlength="7"
-                    maxlength="15"
-                    size="15"
-                    pattern="^((\d{1,2}|1\d\d|2[0-4]\d|25[0-5])\.){3}(\d{1,2}|1\d\d|2[0-4]\d|25[0-5])$"
-                    required
-                  />
-                  <button type="submit">SAVE</button>
-                </form>
+        <tr
+          v-for="(obj, index) in subarray[page]"
+          :key="index + obj.id"
+        >
+          <td data-label="Id">
+            {{ obj.id }}
+          </td>
+          <td data-label="First name">
+            {{ obj.first_name }}
+          </td>
+          <td data-label="Last name">
+            {{ obj.last_name }}
+          </td>
+          <td data-label="Email">
+            {{ obj.email }}
+          </td>
+          <td data-label="Sex">
+            {{ obj.gender }}
+          </td>
+          <td data-label="IP">
+            {{ obj.ip_address }}
+          </td>
+          <td data-label="Edit">
+            <button class="box">
+              <a
+                class="button"
+                :href="'#popup1' + obj.id"
+              >&#128395;</a>
+            </button>
+            <div :id="'popup1' + obj.id" class="overlay">
+              <div class="popup">
+                <h2>EDIT MODE</h2>
+                <a class="close" href="#">&times;</a>
+                <div class="content">
+                  <form @submit.prevent="updateItem(obj.id)">
+                    <input
+                      v-model.number="obj.id"
+                      type="hidden"
+                      value=""
+                      readonly
+                    />
+                    <label>FIRST NAME</label>
+                    <input
+                      v-model.trim="obj.first_name"
+                      type="text"
+                      value=""
+                      required
+                    />
+                    <label>LAST NAME</label>
+                    <input
+                      v-model.trim="obj.last_name"
+                      type="text"
+                      value=""
+                      required
+                    />
+                    <label>EMAIL</label>
+                    <input
+                      v-model="obj.email"
+                      type="email"
+                      value=""
+                      required
+                    />
+                    <label>Gender</label>
+                    <input
+                      v-model="obj.gender"
+                      name="gender"
+                      type="radio"
+                      :checked="obj.gender == gender.fimale"
+                      v-bind:value="Female"
+                    />
+                    <input
+                      v-model="obj.gender"
+                      name="gender"
+                      type="radio"
+                      :checked="obj.gender == gender.gender"
+                      v-bind:value="Male"
+                    />
+                    <label>IP</label>
+                    <input
+                      v-model="obj.ip_address"
+                      type="text"
+                      minlength="7"
+                      maxlength="15"
+                      size="15"
+                      pattern="^((\d{1,2}|1\d\d|2[0-4]\d|25[0-5])\.){3}(\d{1,2}|1\d\d|2[0-4]\d|25[0-5])$"
+                      required
+                    />
+                    <button type="submit">SAVE</button>
+                  </form>
+                </div>
               </div>
             </div>
-          </div>
-            </td>
-            <td data-label="Delete">
-              <button
-                @click="deleteItem(obj.id)"
-                class="icon"
-              >
-                &#9249;
-              </button>
-            </td>
-          </tr>
+          </td>
+          <td data-label="Delete">
+            <button
+              @click="deleteItem(obj.id)"
+              class="icon"
+            >
+              &#9249;
+            </button>
+          </td>
+        </tr>
         </tbody>
       </table>
       <button
@@ -199,11 +199,20 @@ export default {
       this.$store.commit('removeToken')
       this.$router.push('/login')
     },
+    // deleteItem (id) {
+    //   for (let i = 0; i <= this.objects.length; i++) {
+    //     console.log(this.objects.id)
+    //     // нужно доделать удаление
+    //   }
+    // },
     deleteItem (id) {
-      for (let i = 0; i <= this.objects.length; i++) {
-        console.log(this.objects.id)
-        // нужно доделать удаление
-      }
+      let index = null
+      this.objects.forEach((item, i) => {
+        if (id === item.id) {
+          index = i
+        }
+      })
+      this.objects.splice(index, 1)
     },
     updateItem (id) {
       this.objects.find((element, index, array) => {
@@ -218,9 +227,9 @@ export default {
 </script>
 
 <style>
-input{
-  display:block;
-  margin:0 auto;
+input {
+  display: block;
+  margin: 0 auto;
 }
 
 header {
@@ -241,25 +250,27 @@ header {
   color: black;
   text-decoration: none;
 }
-a.glo{
-  color:#00c6ff;
+
+a.glo {
+  color: #00c6ff;
   padding: 15px 20px;
   text-transform: uppercase;
-  width:150px;
-  text-decoration:none;
-  text-align:center;
+  width: 150px;
+  text-decoration: none;
+  text-align: center;
   margin-left: 85%;
   display: block;
-  background-image: linear-gradient(to left,transparent,transparent 50%,#00c6ff 50%,#00c6ff);
+  background-image: linear-gradient(to left, transparent, transparent 50%, #00c6ff 50%, #00c6ff);
   background-position: 100% 0;
   background-size: 200% 100%;
   transition: all .25s ease-in;
   font: 400 18px tahoma;
   border: 1px solid #00C6FF;
 }
+
 a.glo:hover {
   background-position: 0 0;
-  color:#fff;
+  color: #fff;
 }
 
 .container {
@@ -371,7 +382,7 @@ table th {
 }
 
 .box {
-  background: rgba(255,255,255,0.2);
+  background: rgba(255, 255, 255, 0.2);
   border: 2px solid #fff;
   text-align: center;
 }
@@ -383,13 +394,12 @@ table th {
   height: 1.5em;
   vertical-align: middle;
   text-decoration: none;
-  border: .5em solid rgba(0,0,0,0);
+  border: .5em solid rgba(0, 0, 0, 0);
   border-radius: 100%;
-  background: rgb(245,245,245) linear-gradient(rgb(245,245,245), rgb(188,192,193)) 50% 50% / calc(1.5em + .5em*2) calc(1.5em + .5em*2);
-  box-shadow:
-    inset 0 -3px 10px rgba(255,255,255,1),
-    inset 0 3px 10px rgba(0,0,0,.4),
-    0 2px 4px rgba(0,0,0,.9);
+  background: rgb(245, 245, 245) linear-gradient(rgb(245, 245, 245), rgb(188, 192, 193)) 50% 50% / calc(1.5em + .5em * 2) calc(1.5em + .5em * 2);
+  box-shadow: inset 0 -3px 10px rgba(255, 255, 255, 1),
+  inset 0 3px 10px rgba(0, 0, 0, .4),
+  0 2px 4px rgba(0, 0, 0, .9);
 }
 
 .overlay {
@@ -403,6 +413,7 @@ table th {
   visibility: hidden;
   opacity: 0;
 }
+
 .overlay:target {
   visibility: visible;
   opacity: 1;
@@ -423,6 +434,7 @@ table th {
   color: #333;
   font-family: Tahoma, Arial, sans-serif;
 }
+
 .popup .close {
   position: absolute;
   top: 20px;
@@ -433,20 +445,23 @@ table th {
   text-decoration: none;
   color: #333;
 }
+
 .popup .close:hover {
   color: #06D85F;
 }
+
 .popup .content {
   max-height: 30%;
   overflow: auto;
 
 }
 
-@media screen and (max-width: 700px){
-  .box{
+@media screen and (max-width: 700px) {
+  .box {
     width: 70%;
   }
-  .popup{
+
+  .popup {
     width: 70%;
   }
 }

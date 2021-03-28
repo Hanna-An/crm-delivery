@@ -2,9 +2,9 @@
   <div class="login-page">
     <div class="form">
       <p v-if="errors.length">
-        <ul>
-          <li v-for="error in errors" v-bind:key="error">{{ error }}</li>
-        </ul>
+      <ul>
+        <li v-for="error in errors" v-bind:key="error">{{ error }}</li>
+      </ul>
       </p>
       <form @submit.prevent="userLogin">
         <div>
@@ -18,6 +18,7 @@
         <div>
           <button type="submit">Submit</button>
         </div>
+      </form>
     </div>
   </div>
 </template>
