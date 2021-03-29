@@ -225,6 +225,7 @@ export default {
 </script>
 
 <style>
+
 input {
   display: block;
   margin: 0 auto;
@@ -246,8 +247,6 @@ header {
 
 .container {
   width: 100%;
-  padding: 0;
-  margin: 0 auto;
   min-height: 100vh;
   justify-content: center;
   align-items: center;
@@ -339,10 +338,6 @@ table th {
   }
 
   table td::before {
-    /*
-    * aria-label has no advantage, it won't be read inside a table
-    content: attr(aria-label);
-    */
     content: attr(data-label);
     float: left;
     font-weight: bold;
@@ -361,7 +356,6 @@ table th {
 }
 
 .button {
-
   display: inline-block;
   width: 1.5em;
   height: 1.5em;
