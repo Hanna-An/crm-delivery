@@ -1,9 +1,7 @@
 <template>
   <div class="container">
     <header>
-      <div class="text-vcenter">
-        <a href="#" class="delete-item glo" @click.prevent="logout">Logout</a>
-      </div>
+      <Sidebar />
     </header>
     <div
       v-if="subarray.length > 0"
@@ -171,7 +169,11 @@
 </template>
 
 <script>
+import Sidebar from '~/components/Sidebar'
 export default {
+  components: {
+    Sidebar
+  },
   middleware: 'authenticated',
   data () {
     return {
@@ -195,10 +197,6 @@ export default {
     this.subarray = arr
   },
   methods: {
-    logout () {
-      this.$store.commit('removeToken')
-      this.$router.push('/login')
-    },
     // deleteItem (id) {
     //   for (let i = 0; i <= this.objects.length; i++) {
     //     console.log(this.objects.id)
@@ -246,34 +244,9 @@ header {
   z-index: 1;
 }
 
-.delete-item {
-  color: black;
-  text-decoration: none;
-}
-
-a.glo {
-  color: #00c6ff;
-  padding: 15px 20px;
-  text-transform: uppercase;
-  width: 150px;
-  text-decoration: none;
-  text-align: center;
-  margin-left: 85%;
-  display: block;
-  background-image: linear-gradient(to left, transparent, transparent 50%, #00c6ff 50%, #00c6ff);
-  background-position: 100% 0;
-  background-size: 200% 100%;
-  transition: all .25s ease-in;
-  font: 400 18px tahoma;
-  border: 1px solid #00C6FF;
-}
-
-a.glo:hover {
-  background-position: 0 0;
-  color: #fff;
-}
-
 .container {
+  width: 100%;
+  padding: 0;
   margin: 0 auto;
   min-height: 100vh;
   justify-content: center;
