@@ -187,7 +187,8 @@ export default {
     }
   },
   async created () {
-    this.objects = await this.$axios.$get('/users.json')
+    this.objects = await this.$axios.$get('/api/users')
+    console.log(this.objects)
     const array = this.objects
     const size = 10
     const arr = []

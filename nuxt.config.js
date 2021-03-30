@@ -43,6 +43,10 @@ export default {
     '@nuxtjs/auth-next'
   ],
 
+  serverMiddleware: [
+    '~/api/index.js'
+  ],
+
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
   axios: {
     baseUrl: process.env.BASE_URL || 'http://localhost:3000',
