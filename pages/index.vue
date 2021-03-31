@@ -8,6 +8,7 @@
     >
     </div>
     <div class="container">
+      <input type="text" placeholder="Search" v-model="search">
       <table>
         <caption>User table</caption>
         <thead>
@@ -179,6 +180,7 @@ export default {
     return {
       objects: [],
       subarray: [],
+      search: undefined,
       page: 0,
       gender: {
         male: 'Male',
@@ -187,6 +189,7 @@ export default {
     }
   },
   async created () {
+    console.log(this.search)
     this.objects = await this.$axios.$get('/api/users')
     console.log(this.objects)
     const array = this.objects
