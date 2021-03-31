@@ -1,10 +1,10 @@
-const express = require('express')
 const fs = require('fs')
+const express = require('express')
 const app = express()
 
 app.use(express.json())
 
-app.get('/users', (req, res) => {
+app.get('/api/users', (req, res) => {
   const name = req.query.name ? req.query.name.toLowerCase() : undefined
   console.log(name);
   fs.readFile('static/users.json', 'utf8',
@@ -27,10 +27,7 @@ app.get('/users', (req, res) => {
     });
 });
 
-module.exports = {
-  path: '/api',
-  handler: app
-}
+module.exports = app
 
 // Start standalone server if directly running
 if (require.main === module) {
