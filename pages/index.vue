@@ -5,7 +5,6 @@
     >
     </div>
     <div class="container">
-      <input type="text" placeholder="Search" v-model="search">
       <table>
         <caption>User table</caption>
         <thead>

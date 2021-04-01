@@ -43,7 +43,7 @@
           </v-list-item>
 
           <v-list-item>
-            <v-list-item-title>Максим</v-list-item-title>
+            <v-list-item-title>Магазины</v-list-item-title>
           </v-list-item>
 
           <v-list-item>
