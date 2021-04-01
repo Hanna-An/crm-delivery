@@ -14,21 +14,26 @@
           v-model="group"
           active-class="deep-purple--text text--accent-4"
         >
-          <v-list-item>
-            <v-list-item-title>Аня</v-list-item-title>
-          </v-list-item>
 
-          <v-list-item>
-            <v-list-item-title>Артём</v-list-item-title>
-          </v-list-item>
+          <nuxt-link
+            class="link"
+            to="/user">
+            <v-list-item>
+              <v-list-item-title>
+                <div>Профиль</div>
+              </v-list-item-title>
+            </v-list-item>
+          </nuxt-link>
 
-          <v-list-item>
-            <v-list-item-title>Максим</v-list-item-title>
-          </v-list-item>
-
-          <v-list-item>
-            <v-list-item-title>Витя</v-list-item-title>
-          </v-list-item>
+          <nuxt-link
+            class="link"
+            to="/shops">
+            <v-list-item>
+              <v-list-item-title>
+                <div>Магазины</div>
+              </v-list-item-title>
+            </v-list-item>
+          </nuxt-link>
         </v-list-item-group>
       </v-list>
     </v-navigation-drawer>
@@ -100,5 +105,9 @@ a.glo {
 a.glo:hover {
   background-position: 0 0;
   color: #fff;
+}
+
+.link {
+  text-decoration: none;
 }
 </style>
