@@ -13,16 +13,17 @@
   "dependencies": {
     "@nuxtjs/auth-next": "^5.0.0-1616003482.75c20e6",
     "@nuxtjs/axios": "^5.13.1",
+    "@nuxtjs/vuetify": "^1.11.3",
     "core-js": "^3.9.1",
-    "nuxt": "^2.15.3",
     "express": "^4.17.1",
-    "express-validator": "^6.10.0"
+    "express-validator": "^6.10.0",
+    "nuxt": "^2.15.3",
+    "vuetify": "*"
   },
   "devDependencies": {
     "@nuxt/types": "^2.15.3",
     "@nuxtjs/eslint-config": "^6.0.0",
     "@nuxtjs/eslint-module": "^3.0.2",
-    "@nuxtjs/vuetify": "^1.11.3",
     "babel-eslint": "^10.1.0",
     "eslint": "^7.22.0",
     "eslint-plugin-nuxt": "^2.0.0",

@@ -1,8 +1,5 @@
 <template>
   <div class="container">
-    <header>
-      <Sidebar />
-    </header>
     <div
       v-if="subarray.length > 0"
     >
@@ -170,11 +167,7 @@
 </template>
 
 <script>
-import Sidebar from '~/components/Sidebar'
 export default {
-  components: {
-    Sidebar
-  },
   middleware: 'authenticated',
   data () {
     return {
