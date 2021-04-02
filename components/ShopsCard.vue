@@ -15,9 +15,7 @@
 
         <v-card-text class="text--primary">
           <div>{{ shop.title }}</div>
-
           <div>{{ shop.address }}</div>
-
           <div>{{ shop.schedule }}</div>
         </v-card-text>
 
