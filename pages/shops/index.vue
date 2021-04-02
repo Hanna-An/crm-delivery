@@ -2,7 +2,7 @@
   <div class="container">
       <v-row>
         <v-col
-          v-for="(shop, shopKey) in subarray[page]"
+          v-for="(shop, shopKey) in subarray[page - 1]"
           :key="shopKey"
           cols="3"
         >
@@ -14,7 +14,7 @@
       <div class="text-center mt-4">
         <v-pagination
           v-model="page"
-          :length="subarray.length - 1"
+          :length="subarray.length"
           circle
         ></v-pagination>
       </div>
