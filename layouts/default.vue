@@ -122,7 +122,7 @@
 
 <script>
 export default {
-  name: 'Sidebar',
+  name: 'default',
   data: () => ({
     drawer: false,
     group: null,
