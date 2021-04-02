@@ -16,7 +16,7 @@
       <v-spacer></v-spacer>
 
       <div>
-        <a href="#" class="delete-item glo" @click.prevent="logout">Logout</a>
+        <a href="#" class="delete-item" @click.prevent="logout">Logout</a>
       </div>
     </v-app-bar>
 
@@ -78,29 +78,4 @@ export default {
 
 <style lang="scss" scoped>
 
-.delete-item {
-  color: black;
-  text-decoration: none;
-}
-
-a.glo {
-  color: #00c6ff;
-  padding: 15px 20px;
-  text-transform: uppercase;
-  width: 150px;
-  text-decoration: none;
-  text-align: center;
-  display: block;
-  background-image: linear-gradient(to left, transparent, transparent 50%, #00c6ff 50%, #00c6ff);
-  background-position: 100% 0;
-  background-size: 200% 100%;
-  transition: all .25s ease-in;
-  font: 400 18px tahoma;
-  border: 1px solid #00C6FF;
-}
-
-a.glo:hover {
-  background-position: 0 0;
-  color: #fff;
-}
 </style>
