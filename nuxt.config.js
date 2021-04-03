@@ -20,6 +20,7 @@ export default {
 
   // Global CSS: https://go.nuxtjs.dev/config-css
   css: [
+    '~/assets/globals.scss'
   ],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
@@ -40,7 +41,8 @@ export default {
   modules: [
     // https://go.nuxtjs.dev/axios
     '@nuxtjs/axios',
-    '@nuxtjs/auth-next'
+    '@nuxtjs/auth-next',
+    '@nuxtjs/style-resources'
   ],
 
   serverMiddleware: [
@@ -49,10 +51,15 @@ export default {
 
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
   axios: {
-    baseUrl: process.env.BASE_URL || 'http://localhost:3000',
+    baseUrl: process.env.BASE_URL || 'http://localhost:3000'
   },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
+  },
+  styleResources: {
+    sass: [
+      '~/assets/globals.sass' // путь к файлу
+    ]
   }
 }

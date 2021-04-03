@@ -30,9 +30,10 @@
     <v-app-bar
       max-height="64"
     >
-
       <v-app-bar-nav-icon @click.stop="drawer = !drawer"></v-app-bar-nav-icon>
-
+      <NuxtLink to="/">
+        <img class="lynx" src="https://www.seekpng.com/png/detail/87-873124_augusta-lynx-logo-png-transparent-augusta-lynx.png" alt="">
+      </NuxtLink>
       <v-spacer></v-spacer>
       <v-menu
         offset-y

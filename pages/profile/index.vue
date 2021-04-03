@@ -269,48 +269,5 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.blocks_test {
-  height: 300px;
-  width: 100%;
-  background-color: #e8f6fa;
-}
-
-.blocks {
-  width: 90%;
-}
-
-.block {
-  justify-content: flex-end;
-
-  .block_follower {
-    width: 200px;
-    height: 50px;
-    border: 1px solid #e0e0e0;
-    text-align: center;
-    background-color: #ffffff;
-    border-radius: 50px;
-    cursor: pointer;
-  }
-
-  .block_follow {
-    width: 370px;
-    height: 50px;
-    border: 1px solid #e0e0e0;
-    text-align: center;
-    background-color: #3aabf5;
-    color: white;
-    border-radius: 50px;
-    cursor: pointer;
-  }
-}
-
-.rating {
-  color: white;
-}
-
-.btn_skill {
-  border: 1px orange solid;
-  background-color: white;
-}
 
 </style>
