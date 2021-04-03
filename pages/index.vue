@@ -1,14 +1,23 @@
 <template>
   <div class="container">
     <div
-      v-if="subarray.length > 0"
+      v-if="paginate.length > 0"
     >
     </div>
     <div class="container">
+      <div class="row">
+        <div class="search-wrapper panel-heading col-sm-12">
+          <input class="form-control" type="text" v-model="searchQuery" placeholder="Search" />
+          <button @click="searchUsers()">Search</button>
+        </div>
+      </div>
       <table>
         <caption>User table</caption>
         <thead>
         <tr>
+          <th scope="col">
+            Id
+          </th>
           <th scope="col">
             First name
           </th>
@@ -20,9 +29,6 @@
           </th>
           <th scope="col">
             Sex
-          </th>
-          <th scope="col">
-            Id
           </th>
           <th scope="col">
             IP
@@ -37,25 +43,25 @@
         </thead>
         <tbody>
         <tr
-          v-for="(obj, index) in subarray[page]"
+          v-for="(obj, index) in paginate"
           :key="index + obj.id"
         >
-          <td data-label="Id">
+          <td>
             {{ obj.id }}
           </td>
-          <td data-label="First name">
+          <td>
             {{ obj.first_name }}
           </td>
-          <td data-label="Last name">
+          <td>
             {{ obj.last_name }}
           </td>
-          <td data-label="Email">
+          <td>
             {{ obj.email }}
           </td>
-          <td data-label="Sex">
+          <td>
             {{ obj.gender }}
           </td>
-          <td data-label="IP">
+          <td>
             {{ obj.ip_address }}
           </td>
           <td data-label="Edit">
@@ -100,18 +106,12 @@
                     />
                     <label>Gender</label>
                     <input
-                      v-model="obj.gender"
                       name="gender"
                       type="radio"
-                      :checked="obj.gender == gender.fimale"
-                      v-bind:value="Female"
                     />
                     <input
-                      v-model="obj.gender"
                       name="gender"
                       type="radio"
-                      :checked="obj.gender == gender.gender"
-                      v-bind:value="Male"
                     />
                     <label>IP</label>
                     <input
@@ -141,26 +141,14 @@
         </tbody>
       </table>
       <button
-        type="button"
-        @click="page--"
+      v-for="pageNumber in totalPages"
+      :key="pageNumber.id"
+      class="w3-button"
+      @click="currentPage = pageNumber"
+      :class="{current: currentPage === pageNumber, last: (pageNumber == totalPages && Math.abs(pageNumber - currentPage) > 3), first:(pageNumber == 1 && Math.abs(pageNumber - currentPage) > 3)}"
       >
-        -
+      {{ pageNumber }}
       </button>
-      <button
-        v-for="key in subarray.length"
-        :key="key + Math.floor(Math.random() * 1000000)"
-        @click="page = key -1 "
-        type="button"
-      >
-        {{ key }}
-      </button>
-      <button
-        type="button"
-        @click="page++"
-      >
-        +
-      </button>
-      <p>Page {{ page + 1 }}</p>
     </div>
   </div>
 </template>
@@ -170,27 +158,33 @@ export default {
   middleware: 'authenticated',
   data () {
     return {
+      searchQuery: null,
       objects: [],
-      subarray: [],
-      search: undefined,
-      page: 0,
-      gender: {
-        male: 'Male',
-        female: 'Female'
+      currentPage: 1,
+      itemsPerPage: 30
+    }
+  },
+  computed: {
+    resultCount () {
+      return this.objects.length
+    },
+    totalPages () {
+      if (this.resultCount === 0) {
+        return 1
+      } else {
+        return Math.ceil(this.resultCount / this.itemsPerPage)
       }
+    },
+    paginate () {
+      if (!this.objects) {
+        return
+      }
+      const index = this.currentPage * this.itemsPerPage - this.itemsPerPage
+      return this.objects.slice(index, index + this.itemsPerPage)
     }
   },
   async created () {
-    console.log(this.search)
     this.objects = await this.$axios.$get('/api/users')
-    console.log(this.objects)
-    const array = this.objects
-    const size = 10
-    const arr = []
-    for (let i = 0; i < Math.ceil(array.length / size); i++) {
-      arr[i] = array.slice((i * size), (i * size) + size)
-    }
-    this.subarray = arr
   },
   methods: {
     // deleteItem (id) {
@@ -199,6 +193,17 @@ export default {
     //     // нужно доделать удаление
     //   }
     // },
+    async searchUsers () {
+      if (this.searchQuery) {
+        this.objects = await this.$axios.$get('/api/users', {
+          params: {
+            name: this.searchQuery
+          }
+        })
+      } else {
+        this.objects = await this.$axios.$get('/api/users')
+      }
+    },
     deleteItem (id) {
       let index = null
       this.objects.forEach((item, i) => {
@@ -427,5 +432,9 @@ table th {
   .popup {
     width: 70%;
   }
+}
+
+.current {
+  color: teal;
 }
 </style>

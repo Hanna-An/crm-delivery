@@ -6,7 +6,6 @@ app.use(express.json())
 
 app.get('/api/users', (req, res) => {
   const name = req.query.name ? req.query.name.toLowerCase() : undefined
-  console.log(name);
   fs.readFile(`${__dirname}/users.json`, 'utf8',
      (error, data) => {
       if (error) throw error

@@ -40,7 +40,6 @@ export default {
       if (this.login.username && this.login.password) {
         try {
           const response = await this.$axios.$get('/login_user.json')
-          console.log(response)
           if (
             this.login.username === response.username &&
             this.login.password === response.password
