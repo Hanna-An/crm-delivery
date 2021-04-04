@@ -24,6 +24,15 @@
               </v-list-item-title>
             </v-list-item>
           </nuxt-link>
+          <nuxt-link
+            class="link"
+            to="/users">
+            <v-list-item>
+              <v-list-item-title>
+                <div>Users</div>
+              </v-list-item-title>
+            </v-list-item>
+          </nuxt-link>
         </v-list-item-group>
       </v-list>
     </v-navigation-drawer>
