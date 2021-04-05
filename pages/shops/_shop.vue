@@ -45,7 +45,7 @@
     <v-divider class="separator"/>
     <v-row class="blocks ml-auto mr-auto mt-5">
       <v-col
-        cols="8"
+        cols="12"
         v-if="shop"
       >
         <section class="container">

@@ -33,5 +33,7 @@ export default {
 </script>
 
 <style scoped>
-
+.text {
+  text-decoration: none;
+}
 </style>
