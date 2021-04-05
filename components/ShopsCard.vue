@@ -1,5 +1,5 @@
 <template>
-  <nuxt-link :to="`/shops/shop/${shop.title}`">
+  <nuxt-link :to="`/shops/${shop.title}`">
     <v-hover>
       <template v-slot:default="{ hover }">
         <v-card

@@ -3,180 +3,240 @@
     "title": "BIGZZ",
     "address": "Логойский тракт / МКАД",
     "schedule": "09.00 - 23.00",
-    "img": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAANUAAADVCAMAAAD3nkWxAAAAOVBMVEX///+/CAjPRkbfg4P77+/vwcHnoqLDFxf34ODz0NDHJyfrsbHXZWXbc3PLNjbjkpLTVFT23Nzturoe/UuoAAADoElEQVR4nO3Z25qbIBSG4bhBjfvp/V9sjaBd4IJ5poPJyfeetDGK/IIr6DweAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADyd6T7dhbyeS1ns+rGpP90ZX1MqpuZ57iC3N+LAoS+EtjqHbNJa3K1fjz/RL4ecqapCNx9nkRur87BnGR7QLsdliLRYtNul6ubIl33W0Y6lKooxkapRL0SdTmX2yxH5MutQJVK5WFqqST+g71KpbHNHqrb1viyzhkqlshdXSRUJ5UYrlmqQx5bGT5W5kKZSrXoqdfq5WIlUdgK2rqHa262KdzB7qkJN1bWx3TdNeqxsqHIrG7U8cd5SEaaqqtLrcqelWuOZ+td4xFK1gxlf/677oHm7NYkO/j7V9tmbGU8llfG7OlbVelyJqg67e809uTtoFBszlwollXfXPJRUcqjcb5SdTeXz0rg/Wfu1OneRoYrrgdlTLcE1DFLVaneaotVm0esKlMaSVa72ZvGUPdQlVScWQoOSqvE/HgbtfjeRcfDrX3vDGtJLVZZycaf+Coup81136v5coHgav4hmLxWPVGV3IxFsEpd51I83sulrIRiCapK/VMRTteNxHwSpZu9TKlW3fwpm4HVVnL9UxFMV/VKrqcLuX48/7jbX/3Gw16ezaevFz3VDqUik2nIN/5fKrb6HsLlzZsqCc0epSKZy93GQSszART/ejUmwrppF90WsO0rFN6n2DgapxPyZ9OPtjRKs6/0xOWPdUirCXlUbWdv7a6rR//Z4QyB22psNHw7tAA7H0Bwj7kqFGQYTdixfKu+ML80l1eB/64gQ66WR4vjZ2hZQx+DY749SYZbp7lRiyRSUh3DF9O8BQrTShG0U5/wrz3z2MpzT8tks70xVple3s/tRkwP42hSWCjdU+//dS5u1uK1UqKnkPaKk8p5E2sk8zSCDjkeXJVlA2k588Ju+KdWrWnh3hJIq9dToJpUJNvb2VPPZ5vmk/5ZUF8tPn/D3PfpgY/AOzmwPZJc23pmq++HbmFVt0t5K4uZTrssbU70qr3Lq6DH7AuI6lra+jdoRH0i1d1I7deSF4Bx5y2nrQ/J9xvtS2aWbemp1Eq77/uGqdrNv75Kh3pWq1Z8anehfD+qwVBR2BtbJ0vmOVH1ZVufb/NipTfCXHrdO0CbnuD1VpQpn/lS/0B0PgPOU9y8an9flXcABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADk8hemlxnL9q8FFQAAAABJRU5ErkJggg=="
+    "img": "https://luxsoft.by/wp-content/uploads/2019/08/213.jpg",
+    "coords": [53.955633070602346,27.6201225],
+    "text": "Мы будем рады предложить вам продукцию самого лучшего качества. По самым вкусным ценам и хорошими скидками."
   },
   {
     "title": "Гиппо",
     "address": "Рокоссовского 2",
     "schedule": "09.00 - 23.00",
-    "img": "https://gippo.by/upload/og_image.jpg"
+    "img": "https://gippo.by/upload/og_image.jpg",
+    "coords": [53.875293727172014,27.595249521223533],
+    "text": "Мы будем рады предложить вам продукцию самого лучшего качества. По самым вкусным ценам и хорошими скидками."
   },
   {
     "title": "Евроопт",
     "address": "ул. Монтажников 2",
     "schedule": "09.00 - 23.00",
-    "img": "https://www.drogichin.by/wp-content/uploads/2019/11/page1-ru.jpg"
+    "img": "https://www.drogichin.by/wp-content/uploads/2019/11/page1-ru.jpg",
+    "coords": [53.87351607068287,27.41617849999994],
+    "text": "Мы будем рады предложить вам продукцию самого лучшего качества. По самым вкусным ценам и хорошими скидками."
   },
   {
     "title": "Prostore",
     "address": "Дзержинского 126",
     "schedule": "09.00 - 23.00",
-    "img": "https://lacerta.by/Files/Prostore/ProStore.jpg"
+    "img": "https://lacerta.by/Files/Prostore/ProStore.jpg",
+    "coords": [53.847362570703076,27.470894499999932],
+    "text": "Мы будем рады предложить вам продукцию самого лучшего качества. По самым вкусным ценам и хорошими скидками."
   },
   {
     "title": "Автозаводской",
     "address": "ул.Варвашени 1",
     "schedule": "09.00 - 23.00",
-    "img": "https://parikof.ru/upload/iblock/9c8/9c8f2a57a1a15ae6bd2f15807fb7dfc0.JPG"
+    "img": "https://parikof.ru/upload/iblock/9c8/9c8f2a57a1a15ae6bd2f15807fb7dfc0.JPG",
+    "coords": [53.86497857069002,27.66860499999999],
+    "text": "Мы будем рады предложить вам продукцию самого лучшего качества. По самым вкусным ценам и хорошими скидками."
   },
   {
     "title": "Азарэнне",
     "address": "Машерова 51",
     "schedule": "09.00 - 23.00",
-    "img": "https://avatars.mds.yandex.net/get-altay/2804357/2a00000170bca11f5d299dcd94e998ad8397/L"
+    "img": "https://avatars.mds.yandex.net/get-altay/2804357/2a00000170bca11f5d299dcd94e998ad8397/L",
+    "coords": [53.91127457063414,27.528772999999923],
+    "text": "Мы будем рады предложить вам продукцию самого лучшего качества. По самым вкусным ценам и хорошими скидками."
   },
   {
     "title": "Акрайчык",
     "address": "Брикета 2",
     "schedule": "09.00 - 23.00",
-    "img": "https://cdn1.ozone.ru/multimedia/c500/1007396687.jpg"
+    "img": "https://cdn1.ozone.ru/multimedia/c500/1007396687.jpg",
+    "coords": [53.90896873140801,27.415240542327812],
+    "text": "Мы будем рады предложить вам продукцию самого лучшего качества. По самым вкусным ценам и хорошими скидками."
   },
   {
     "title": "АЛМИ",
     "address": "Космонавтов 28",
     "schedule": "09.00 - 23.00",
-    "img": "https://i.mycdn.me/i?r=AzGBqNaF5OQp2lMpnhRx4DEFACONSnEvYczWsnMmF6NWIcJ71FDRnYLneE6FQv6pCIo"
+    "img": "https://i.mycdn.me/i?r=AzGBqNaF5OQp2lMpnhRx4DEFACONSnEvYczWsnMmF6NWIcJ71FDRnYLneE6FQv6pCIo",
+    "coords": [53.84988557070954,27.455506499999977],
+    "text": "Мы будем рады предложить вам продукцию самого лучшего качества. По самым вкусным ценам и хорошими скидками."
   },
   {
     "title": "Закрома",
     "address": "Калиновского 72",
     "schedule": "09.00 - 23.00",
-    "img": "https://avatars.mds.yandex.net/get-altay/1684282/2a0000016b17b44cb89d8c286ec62c27cf7a/XXL"
+    "img": "https://avatars.mds.yandex.net/get-altay/1684282/2a0000016b17b44cb89d8c286ec62c27cf7a/XXL",
+    "coords": [53.93819857064502,27.653684],
+    "text": "Мы будем рады предложить вам продукцию самого лучшего качества. По самым вкусным ценам и хорошими скидками."
   },
   {
     "title": "Байкальский",
     "address": "Ангарская ул. 38/2",
     "schedule": "09.00 - 23.00",
-    "img": "https://avatars.mds.yandex.net/get-altay/1594075/2a0000016c0f7a69441b519d09cfc67b346e/XXXL"
+    "img": "https://avatars.mds.yandex.net/get-altay/1594075/2a0000016c0f7a69441b519d09cfc67b346e/XXXL",
+    "coords": [53.871509070677675,27.684891499999974],
+    "text": "Мы будем рады предложить вам продукцию самого лучшего качества. По самым вкусным ценам и хорошими скидками."
   },
   {
     "title": "Mark Formelle",
     "address": "Калиновского 46",
     "schedule": "09.00 - 23.00",
-    "img": "http://karavanmall.by/wp-content/uploads/2019/05/mark-formel-1-e1559054937103.png"
+    "img": "http://karavanmall.by/wp-content/uploads/2019/05/mark-formel-1-e1559054937103.png",
+    "coords": [53.94136807062401,27.64636249999999],
+    "text": "Мы будем рады предложить вам продукцию самого лучшего качества. По самым вкусным ценам и хорошими скидками."
   },
   {
     "title": "Белдарпрод",
-    "address": " Волгоградская 45",
+    "address": "Волгоградская 45",
     "schedule": "09.00 - 23.00",
-    "img": "https://avatars.mds.yandex.net/get-altay/1784631/2a0000016b51f6aa8871dac02bfa84fab47c/XXL"
+    "img": "https://avatars.mds.yandex.net/get-altay/1784631/2a0000016b51f6aa8871dac02bfa84fab47c/XXL",
+    "coords": [53.936560570640815,27.61301699999998],
+    "text": "Мы будем рады предложить вам продукцию самого лучшего качества. По самым вкусным ценам и хорошими скидками."
   },
   {
     "title": "Белмаркет",
     "address": "Руссиянова 1",
     "schedule": "09.00 - 23.00",
-    "img": "https://p2.zoon.ru/preview/cU4JfE8FFScoo3HcYkOifw/439x440x85/1/0/9/original_5b03715e4c2ff30a4207c3d6_5b03719a9828d.jpg"
+    "img": "https://p2.zoon.ru/preview/cU4JfE8FFScoo3HcYkOifw/439x440x85/1/0/9/original_5b03715e4c2ff30a4207c3d6_5b03719a9828d.jpg",
+    "coords": [53.94168607062487,27.684145499999925],
+    "text": "Мы будем рады предложить вам продукцию самого лучшего качества. По самым вкусным ценам и хорошими скидками."
   },
   {
     "title": "БЛВ",
     "address": "Почтовая 14",
     "schedule": "09.00 - 23.00",
-    "img": "https://avatars.mds.yandex.net/get-altay/239474/2a0000015d45c2a68f11a9ae37bb7cd049c4/XXL"
+    "img": "https://avatars.mds.yandex.net/get-altay/239474/2a0000015d45c2a68f11a9ae37bb7cd049c4/XXL",
+    "coords": [53.9431120706285,27.707384999999945],
+    "text": "Мы будем рады предложить вам продукцию самого лучшего качества. По самым вкусным ценам и хорошими скидками."
   },
   {
     "title": "Блеск",
     "address": "Шаранговича 51",
     "schedule": "09.00 - 23.00",
-    "img": "https://avatars.mds.yandex.net/get-altay/239474/2a0000015f1a5cadc4a57787952514ffdf8d/L"
+    "img": "https://avatars.mds.yandex.net/get-altay/239474/2a0000015f1a5cadc4a57787952514ffdf8d/L",
+    "coords": [53.88170057067475,27.441214500000005],
+    "text": "Мы будем рады предложить вам продукцию самого лучшего качества. По самым вкусным ценам и хорошими скидками."
   },
   {
     "title": "Заходнi",
     "address": "Лещинского 1",
     "schedule": "09.00 - 23.00",
-    "img": "https://upload-site.storage.yandexcloud.net/iblock/027/027cb9ab7def481c77349b3b9cc12567/1.jpg"
+    "img": "https://upload-site.storage.yandexcloud.net/iblock/027/027cb9ab7def481c77349b3b9cc12567/1.jpg",
+    "coords": [53.90703707065244,27.45241649999995],
+    "text": "Мы будем рады предложить вам продукцию самого лучшего качества. По самым вкусным ценам и хорошими скидками."
   },
   {
     "title": "Зеленый Клен",
     "address": "Коласа ул. 65А",
     "schedule": "09.00 - 23.00",
-    "img": "https://avatars.mds.yandex.net/get-altay/1359533/2a00000162e959432b33c0357388a64f8eee/XXXL"
+    "img": "https://avatars.mds.yandex.net/get-altay/1359533/2a00000162e959432b33c0357388a64f8eee/XXXL",
+    "coords": [53.93568057063855,27.602776499999962],
+    "text": "Мы будем рады предложить вам продукцию самого лучшего качества. По самым вкусным ценам и хорошими скидками."
   },
   {
     "title": "Златко",
     "address": "Карбышева 13",
     "schedule": "09.00 - 23.00",
-    "img": "https://avatars.mds.yandex.net/get-altay/223006/2a0000015b3b5ae590f55f04482da6d7b99d/L"
+    "img": "https://avatars.mds.yandex.net/get-altay/223006/2a0000015b3b5ae590f55f04482da6d7b99d/L",
+    "coords": [53.95170157062136,27.63550199999991],
+    "text": "Мы будем рады предложить вам продукцию самого лучшего качества. По самым вкусным ценам и хорошими скидками."
   },
   {
     "title": "Крынiца",
     "address": "Парковая 2",
     "schedule": "09.00 - 23.00",
-    "img": "https://avatars.mds.yandex.net/get-altay/1546430/2a0000016d00b593bd2a5254d2b90a962722/L"
+    "img": "https://avatars.mds.yandex.net/get-altay/1546430/2a0000016d00b593bd2a5254d2b90a962722/L",
+    "coords": [53.91306253475292,27.534251093254074],
+    "text": "Мы будем рады предложить вам продукцию самого лучшего качества. По самым вкусным ценам и хорошими скидками."
   },
   {
     "title": "Народный",
     "address": "Богдановича 116",
     "schedule": "09.00 - 23.00",
-    "img": "https://lh3.googleusercontent.com/proxy/m3gbvLb5kXV-lvdAtc_dgweaM-AatcbIDhA2asBkZhG5sF5d4jmRmwcPPAUhtrUBq30DakVC7W1WZ0g2qhs9GhVQ4lcbYGMkilwk5g"
+    "img": "https://lh3.googleusercontent.com/proxy/m3gbvLb5kXV-lvdAtc_dgweaM-AatcbIDhA2asBkZhG5sF5d4jmRmwcPPAUhtrUBq30DakVC7W1WZ0g2qhs9GhVQ4lcbYGMkilwk5g",
+    "coords": [53.93489057063651,27.58217799999995],
+    "text": "Мы будем рады предложить вам продукцию самого лучшего качества. По самым вкусным ценам и хорошими скидками."
   },
   {
     "title": "Adidas",
     "address": "Народная 18",
     "schedule": "09.00 - 23.00",
-    "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR56gl7rIQ3tVyzy8fQ4dMPPLmKUcN-7SY-BNyDPdKAAMqT_uG07vOxHcSpz0CNaRa7je4&usqp=CAU"
+    "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR56gl7rIQ3tVyzy8fQ4dMPPLmKUcN-7SY-BNyDPdKAAMqT_uG07vOxHcSpz0CNaRa7je4&usqp=CAU",
+    "coords": [53.87387107068373,27.61858649999993],
+    "text": "Мы будем рады предложить вам продукцию самого лучшего качества. По самым вкусным ценам и хорошими скидками."
   },
   {
     "title": "Новый",
     "address": "Танка 30/2",
     "schedule": "09.00 - 23.00",
-    "img": "https://3ceni.by/upload/iblock/0a3/0a3acfaff9b8ec8c3cc3e4762df7c427.jpg"
+    "img": "https://3ceni.by/upload/iblock/0a3/0a3acfaff9b8ec8c3cc3e4762df7c427.jpg",
+    "coords": [53.908288070655594,27.53302199999998],
+    "text": "Мы будем рады предложить вам продукцию самого лучшего качества. По самым вкусным ценам и хорошими скидками."
   },
   {
     "title": "Puma",
     "address": "Энгельса 56",
     "schedule": "09.00 - 23.00",
-    "img": "https://trademaster.ua/im/pics/5512372-Pumma817.jpg"
+    "img": "https://trademaster.ua/im/pics/5512372-Pumma817.jpg",
+    "coords": [53.900501185782666,27.56241049999999],
+    "text": "Мы будем рады предложить вам продукцию самого лучшего качества. По самым вкусным ценам и хорошими скидками."
   },
   {
     "title": "Палессе",
     "address": "Рокоссовского 62",
     "schedule": "09.00 - 23.00",
-    "img": "https://avatars.mds.yandex.net/get-altay/1881820/2a0000016a69bf5c014c4060a417edd6f5dd/XXXL"
+    "img": "https://avatars.mds.yandex.net/get-altay/1881820/2a0000016a69bf5c014c4060a417edd6f5dd/XXXL",
+    "coords": [53.86822257069839,27.599209999999943],
+    "text": "Мы будем рады предложить вам продукцию самого лучшего качества. По самым вкусным ценам и хорошими скидками."
   },
   {
     "title": "Радзивилловский",
     "address": "Острошицкая 3",
     "schedule": "09.00 - 23.00",
-    "img": "http://radzivil.by/upload/og_image.jpg"
+    "img": "http://radzivil.by/upload/og_image.jpg",
+    "coords": [53.94822557061242,27.693487999999984],
+    "text": "Мы будем рады предложить вам продукцию самого лучшего качества. По самым вкусным ценам и хорошими скидками."
   },
   {
     "title": "Рамонак",
     "address": "Победителей 101",
     "schedule": "09.00 - 23.00",
-    "img": "https://avatars.mds.yandex.net/get-altay/363317/2a0000015d45cd0aa66ab86de0ec1cbf188d/XXXL"
+    "img": "https://avatars.mds.yandex.net/get-altay/363317/2a0000015d45cd0aa66ab86de0ec1cbf188d/XXXL",
+    "coords": [53.93488057063653,27.497816999999962],
+    "text": "Мы будем рады предложить вам продукцию самого лучшего качества. По самым вкусным ценам и хорошими скидками."
   },
   {
     "title": "Северный",
     "address": "Мирошниченко 3",
     "schedule": "09.00 - 23.00",
-    "img": "https://avatars.mds.yandex.net/get-altay/1546239/2a0000016dbf4f3e4baeb303dc1e22510871/L"
+    "img": "https://avatars.mds.yandex.net/get-altay/1546239/2a0000016dbf4f3e4baeb303dc1e22510871/L",
+    "coords": [53.95874807061034,27.60591149999999],
+    "text": "Мы будем рады предложить вам продукцию самого лучшего качества. По самым вкусным ценам и хорошими скидками."
   },
   {
     "title": "Соседи",
     "address": "Антоновская 30",
     "schedule": "09.00 - 23.00",
-    "img": "https://www.belexpo.by/upload/medialibrary/f54/sosedi.png"
+    "img": "https://www.belexpo.by/upload/medialibrary/f54/sosedi.png",
+    "coords": [53.89658557065476,27.591475499999984],
+    "text": "Мы будем рады предложить вам продукцию самого лучшего качества. По самым вкусным ценам и хорошими скидками."
   },
   {
     "title": "Таллин",
     "address": "Бурдейного 11",
     "schedule": "09.00 - 23.00",
-    "img": "https://oldtallinn.eu/wp-content/uploads/2017/11/maxima.jpg"
+    "img": "https://oldtallinn.eu/wp-content/uploads/2017/11/maxima.jpg",
+    "coords": [53.87351607068287,27.41617849999994],
+    "text": "Мы будем рады предложить вам продукцию самого лучшего качества. По самым вкусным ценам и хорошими скидками."
   },
   {
     "title": "Евроопт",
     "address": "ул. Монтажников 2",
     "schedule": "09.00 - 23.00",
-    "img": "https://www.drogichin.by/wp-content/uploads/2019/11/page1-ru.jpg"
+    "img": "https://www.drogichin.by/wp-content/uploads/2019/11/page1-ru.jpg",
+    "coords": [53.87351607068287,27.41617849999994],
+    "text": "Мы будем рады предложить вам продукцию самого лучшего качества. По самым вкусным ценам и хорошими скидками."
   }
 ]
