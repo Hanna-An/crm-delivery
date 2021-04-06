@@ -233,9 +233,9 @@
           </div>
         </div>
       </v-col>
-      <v-col cols="4">
-        <h3>Where I write</h3>
-      </v-col>
+<!--      <v-col cols="4">-->
+<!--        <h3>Where I write</h3>-->
+<!--      </v-col>-->
       <v-col cols="8">
         <p>Most of all in my life I love programming</p>
         <p>More than 10,000 books on this topic have been read and courses taken. I am the most pumped-up man</p>
@@ -245,26 +245,34 @@
         </p>
       </v-col>
       <v-col
-        cols="2"
+      cols="4"
       >
-        <p>Indound.org</p>
-        <p>On Startups</p>
-        <p>Linked In</p>
-        <p>HubSpot</p>
+        <Calculator />
       </v-col>
-      <v-col cols="2">
-        <p>public author</p>
-        <p>personal blog</p>
-        <p>personal blog</p>
-        <p>company blog</p>
-      </v-col>
+<!--      <v-col-->
+<!--        cols="2"-->
+<!--      >-->
+<!--        <p>Indound.org</p>-->
+<!--        <p>On Startups</p>-->
+<!--        <p>Linked In</p>-->
+<!--        <p>HubSpot</p>-->
+<!--      </v-col>-->
+<!--      <v-col cols="2">-->
+<!--        <p>public author</p>-->
+<!--        <p>personal blog</p>-->
+<!--        <p>personal blog</p>-->
+<!--        <p>company blog</p>-->
+<!--      </v-col>-->
     </v-row>
   </div>
 </template>
 
 <script>
+import Calculator from '~/components/Calculator'
 export default {
-  name: 'Index'
+  components: {
+    Calculator
+  }
 }
 </script>
 
