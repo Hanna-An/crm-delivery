@@ -39,18 +39,12 @@ export default {
       this.errors = []
       if (this.login.username && this.login.password) {
         try {
-          const response = await this.$axios.$get('/login_user.json')
-          if (
-            this.login.username === response.username &&
-            this.login.password === response.password
-          ) {
-            this.$store.commit('addToken', response.token)
-            this.$router.push('/')
-          } else {
-            this.errors.push('Wrong username or password')
-          }
+          const response = await this.$axios.$post('api/login', this.login)
+          this.$store.commit('addToken', response.accessToken)
+          this.$router.push('/')
         } catch (err) {
-          console.log(err)
+          console.log({ err })
+          this.errors = err.response.data.errors.map(a => a.msg || a)
         }
       }
 
