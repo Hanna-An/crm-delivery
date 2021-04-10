@@ -130,8 +130,6 @@
                 </div>
               </div>
             </div>
-          </td>
-          <td data-label="Delete">
             <button
               @click="deleteItem(obj.id)"
               class="icon"
