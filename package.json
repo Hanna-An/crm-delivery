@@ -19,6 +19,7 @@
     "express": "^4.17.1",
     "express-validator": "^6.10.0",
     "nuxt": "^2.15.3",
+    "uuid": "^8.3.2",
     "vue-material-design-icons": "^4.11.0",
     "vue-yandex-maps": "^0.10.10",
     "vuetify": "*"
