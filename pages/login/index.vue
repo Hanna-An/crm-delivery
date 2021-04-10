@@ -8,11 +8,11 @@
       </p>
       <form @submit.prevent="userLogin">
         <div>
-          <label>Username</label>
+          <label>Username (user@example.com)</label>
           <input type="email"   v-model="login.username"  />
         </div>
         <div>
-          <label>Password</label>
+          <label>Password (pass123)</label>
           <input type="password" v-model="login.password"  />
         </div>
         <div>
@@ -28,8 +28,8 @@ export default {
   data () {
     return {
       login: {
-        username: 'user@example.com',
-        password: 'pass123'
+        username: '',
+        password: ''
       },
       errors: []
     }

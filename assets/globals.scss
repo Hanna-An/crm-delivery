@@ -132,7 +132,6 @@ table {
   margin: 0;
   padding: 0;
   width: $mainWidth;
-  table-layout: fixed;
 
   caption {
     font-size: 1.5em;
@@ -159,6 +158,27 @@ table {
 
 .icon {
   font-size: 1em;
+}
+tbody {
+  tr {
+    &:hover {
+      background-color: rgba(238, 109, 109, 0.3);
+    }
+  }
+  td {
+    position: relative;
+    &:hover {
+      &:before {
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: -9999px;
+        bottom: -9999px;
+        background-color: rgba(255,255,255,0.2);
+        z-index: -1;
+      }
+    }
+  }
 }
 
 header {
@@ -229,7 +249,7 @@ input {
   background: rgba(255, 255, 255, 0.2);
   border: 2px solid $bgColor;
   text-align: center;
-}
+} // убрать
 
 .button {
   display: inline-block;

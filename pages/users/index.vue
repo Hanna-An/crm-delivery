@@ -47,6 +47,9 @@
           :key="index + obj.id"
         >
           <td>
+            <nuxt-link :to="{path: '/users/user' + obj.id }">
+              <account-mdi />
+            </nuxt-link>
             {{ obj.id }}
           </td>
           <td>
@@ -65,11 +68,10 @@
             {{ obj.ip_address }}
           </td>
           <td data-label="Edit">
-            <button class="box">
+            <button>
               <a
-                class="button"
                 :href="'#popup1' + obj.id"
-              >&#128395;</a>
+              ><feather-mdi /> </a>
             </button>
             <div :id="'popup1' + obj.id" class="overlay">
               <div class="popup">
