@@ -7,7 +7,7 @@
     <div class="container">
       <div class="row">
         <div class="search-wrapper panel-heading col-sm-12">
-          <input class="form-control" type="text" v-model="searchQuery" placeholder="Search..." />
+          <input class="form-control" type="text" v-on:keyup.enter="searchUsers()" v-model="searchQuery" placeholder="Search..." />
           <button class="btn-search" @click="searchUsers()">Search</button>
         </div>
       </div>
@@ -36,9 +36,6 @@
           <th scope="col">
             Edit
           </th>
-          <th scope="col">
-            Delete
-          </th>
         </tr>
         </thead>
         <tbody>
@@ -47,7 +44,7 @@
           :key="index + obj.id"
         >
           <td>
-            <nuxt-link :to="{path: '/users/user' + obj.id }">
+            <nuxt-link :to="{path: '/users/' + obj.id }">
               <account-mdi />
             </nuxt-link>
             {{ obj.id }}
@@ -69,9 +66,11 @@
           </td>
           <td data-label="Edit">
             <button>
-              <a
+              <v-btn
                 :href="'#popup1' + obj.id"
-              ><feather-mdi /> </a>
+                elevation="2"
+                small
+              >🔓</v-btn>
             </button>
             <div :id="'popup1' + obj.id" class="overlay">
               <div class="popup">
@@ -131,11 +130,25 @@
               </div>
             </div>
             <button
-              @click="deleteItem(obj.id)"
               class="icon"
             >
-              &#9249;
+              <v-btn
+                :href="'#popup2' + obj.id"
+                elevation="2"
+                small
+              >❌</v-btn>
             </button>
+            <div :id="'popup2' + obj.id" class="overlay">
+              <div class="popup">
+                <h2>Удвление</h2>
+                <h3>Вы действительно хотите удалить юзера?</h3>
+                <v-btn @click="deleteItem(obj.id)" color="red">Да</v-btn>
+                <v-btn href="#" color="green">Нет</v-btn>
+                <a class="close" href="#">&times;</a>
+                <div class="content">
+                </div>
+              </div>
+            </div>
           </td>
         </tr>
         </tbody>
