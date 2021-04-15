@@ -33,6 +33,16 @@
               </v-list-item-title>
             </v-list-item>
           </nuxt-link>
+          <nuxt-link
+            class="link"
+            to="/news"
+          >
+            <v-list-item>
+              <v-list-item-title>
+                <div>Новости</div>
+              </v-list-item-title>
+            </v-list-item>
+          </nuxt-link>
         </v-list-item-group>
       </v-list>
     </v-navigation-drawer>
