@@ -74,7 +74,6 @@ const handleValidationErrors = (req, res, next) => {
     const body = req.body
     const login_users = req.app.login_users
     const user = login_users.get("users").find({ username: body.username }).value();
-    console.log(user)
     if (!user){
         res.status(400).send({
             success: false,

@@ -8,7 +8,7 @@ const usersRouter = require("./routes/users");
 
 const FileSync = require("lowdb/adapters/FileSync");
 
-const adapter = new FileSync(`${__dirname}/login_users.json`);
+const adapter = new FileSync('./login_users.json');
 const login_users = low(adapter);
 
 login_users.defaults({ users: [] }).write();
@@ -21,7 +21,7 @@ const options = {
       version: '1.0.0',
     },
   },
-  apis: [`${__dirname}/routes/*.js`]
+  apis: ['./routes/*.js']
 }
 
 const specs = swaggerJsDoc(options);
