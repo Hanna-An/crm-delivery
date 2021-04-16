@@ -19,8 +19,14 @@ const options = {
       version: '1.0.0',
     },
   },
+  servers: [
+    {
+      url: `${process.env.BASE_URL || 'http://localhost'}:${process.env.PORT || 3001}`,
+    },
+  ],
   apis: [`${__dirname}/routes/*.js`]
 }
+console.log(`${process.env.BASE_URL || 'http://localhost'}:${process.env.PORT || 3001}`)
 
 const specs = swaggerJsDoc(options);
 
