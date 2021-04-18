@@ -2,24 +2,76 @@
   <div class="container">
     <h2>Новости</h2>
 
-    <div
+    <v-row
       v-for="(item, index) in news"
       :key="index"
-      class="news-small"
+      class="news-small py-8 px-3"
+      no-gutters
     >
-      <img
-        :src="item.image"
-        class="news-small__image"
+      <v-col
+        cols="12"
+        sm="2"
       >
-      <div class="news-small__text">
-        <div class="news-small__text-title">
+        <img
+          :src="item.image"
+          class="news-small__image"
+        >
+      </v-col>
+      <v-col
+        cols="11"
+        sm="9"
+        class="pl-sm-8 pt-6 pt-sm-0"
+      >
+        <div class="news-small__text-title text--black font-weight-bold mb-2">
           {{ item.title }}
         </div>
-        <div class="news-small__text-preview">
+        <div class="news-small__text-preview text--black">
           {{ item.short_description }}
         </div>
-      </div>
-    </div>
+      </v-col>
+      <v-col
+        cols="1"
+        class="text-right pt-6 pt-sm-0"
+      >
+        <v-btn
+          icon
+          @click.stop="dialog = true, itemId = item._id"
+        >
+          <v-icon>
+            mdi-trash-can-outline
+          </v-icon>
+        </v-btn>
+      </v-col>
+    </v-row>
+
+    <v-dialog
+      v-model="dialog"
+      max-width="290"
+      light
+    >
+      <v-card>
+        <v-card-title class="text-subtitle-1">
+          Удалить новость?
+        </v-card-title>
+        <v-card-actions>
+          <v-spacer />
+          <v-btn
+            color="green darken-1"
+            text
+            @click="dialog = false"
+          >
+            Нет
+          </v-btn>
+          <v-btn
+            color="green darken-1"
+            text
+            @click="deleteNewsItem(true)"
+          >
+            Да
+          </v-btn>
+        </v-card-actions>
+      </v-card>
+    </v-dialog>
   </div>
 </template>
 
@@ -27,7 +79,9 @@
 export default {
   data () {
     return {
-      news: {}
+      news: [],
+      dialog: false,
+      itemId: null
     }
   },
   created () {
@@ -35,9 +89,24 @@ export default {
   },
   methods: {
     async getNews () {
-      const response = await fetch('/news.json')
-      const data = await response.json()
+      const data = await this.$axios.$get('/news.json')
       this.news = data.data.news.items
+    },
+    async deleteNewsItem (agreement) {
+      const id = this.itemId
+      this.dialog = false
+      if (agreement) {
+        await this.$axios.delete(`/api/news/${id}/delete`)
+
+        for (let index = 0; index < this.news.length; index++) {
+          const indexInArray = this.news.findIndex(item => item._id === id)
+
+          if (indexInArray > -1) {
+            this.news.splice(indexInArray, 1)
+            break
+          }
+        }
+      }
     }
   }
 }
@@ -45,33 +114,22 @@ export default {
 
 <style scoped>
   .news-small {
-    padding: 32px 12px;
-    display: flex;
     border-bottom: 1px solid gray;
-    margin-bottom: 22px;
   }
 
   .news-small__image {
-    height: 65px;
-    width: 100px;
+    height: auto;
+    width: 100%;
     object-fit: cover;
   }
 
-  .news-small__text {
-    padding-left: 32px;
-  }
-
   .news-small__text-title {
-    font-weight: 700;
     font-size: 16px;
-    color: #000;
-    margin-bottom: 4px;
   }
 
   .news-small__text-preview {
     font-size: 14px;
     letter-spacing: 0.01em;
     opacity: 0.8;
-    color: #000;
   }
 </style>
