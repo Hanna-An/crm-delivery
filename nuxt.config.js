@@ -52,13 +52,13 @@ export default {
   ],
 
   server: {
-    host: process.env.HOST || 'localhost',
-    port: process.env.PORT || 3000
+    host: 'mikkou.org',
+    port: 8080
   },
 
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
   axios: {
-    baseUrl: process.env.BASE_URL || 'http://localhost:3000'
+    baseUrl: `http://mikkou.org:8080`
   },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
