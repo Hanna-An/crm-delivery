@@ -32,7 +32,7 @@ const specs = swaggerJsDoc(options);
 
 const app = express();
 
-app.use("/api/api-docs", swaggerUI.serve, swaggerUI.setup(specs));
+app.use("/api", swaggerUI.serve, swaggerUI.setup(specs));
 
 app.login_users = login_users;
 
