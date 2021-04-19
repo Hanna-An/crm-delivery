@@ -51,6 +51,11 @@ export default {
     '~/api/index.js'
   ],
 
+  server: {
+    host: process.env.HOST || 'localhost',
+    port: process.env.PORT || 3000
+  },
+
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
   axios: {
     baseUrl: process.env.BASE_URL || 'http://localhost:3000'
