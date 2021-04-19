@@ -35,7 +35,7 @@ const handleValidationErrors = (req, res, next) => {
 
 /**
  * @swagger
- * /api/login:
+ * /:
  *   post:
  *     tags: [Auth]
  *     description: User login
