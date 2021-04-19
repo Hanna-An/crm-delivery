@@ -1,7 +1,6 @@
 <template>
   <div class="container">
     <h2>Новости</h2>
-
     <v-row
       v-for="(item, index) in news"
       :key="index"
@@ -22,9 +21,12 @@
         sm="9"
         class="pl-sm-8 pt-6 pt-sm-0"
       >
-        <div class="news-small__text-title text--black font-weight-bold mb-2">
+        <nuxt-link
+          :to="`/news/${item.url}`"
+          class="news-small__text-title text--black font-weight-bold mb-2"
+        >
           {{ item.title }}
-        </div>
+        </nuxt-link>
         <div class="news-small__text-preview text--black">
           {{ item.short_description }}
         </div>
@@ -65,7 +67,7 @@
           <v-btn
             color="green darken-1"
             text
-            @click="deleteNewsItem(true)"
+            @click="deleteNewsItem()"
           >
             Да
           </v-btn>
@@ -92,19 +94,17 @@ export default {
       const data = await this.$axios.$get('/news.json')
       this.news = data.data.news.items
     },
-    async deleteNewsItem (agreement) {
+    async deleteNewsItem () {
       const id = this.itemId
       this.dialog = false
-      if (agreement) {
-        await this.$axios.delete(`/api/news/${id}/delete`)
+      await this.$axios.delete(`/api/news/${id}/delete`)
 
-        for (let index = 0; index < this.news.length; index++) {
-          const indexInArray = this.news.findIndex(item => item._id === id)
+      for (let index = 0; index < this.news.length; index++) {
+        const indexInArray = this.news.findIndex(item => item._id === id)
 
-          if (indexInArray > -1) {
-            this.news.splice(indexInArray, 1)
-            break
-          }
+        if (indexInArray > -1) {
+          this.news.splice(indexInArray, 1)
+          break
         }
       }
     }
@@ -112,7 +112,7 @@ export default {
 }
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
   .news-small {
     border-bottom: 1px solid gray;
   }
@@ -125,6 +125,11 @@ export default {
 
   .news-small__text-title {
     font-size: 16px;
+    text-decoration: none;
+    color: #000000;
+    &:hover {
+      color: darkblue;
+    }
   }
 
   .news-small__text-preview {
