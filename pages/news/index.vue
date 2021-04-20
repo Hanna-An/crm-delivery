@@ -1,6 +1,8 @@
 <template>
   <div class="container">
-    <h2>Новости</h2>
+    <h2>
+      Новости
+    </h2>
     <v-row
       v-for="(item, index) in news"
       :key="index"
