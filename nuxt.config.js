@@ -54,13 +54,13 @@ export default {
   ],
 
   server: {
-    host: process.env.HOST,
-    port: process.env.PORT
+    host: process.env.HOST || 'localhost',
+    port: process.env.PORT || 8080
   },
 
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
   axios: {
-    baseUrl: `http://${process.env.HOST || 'localhost' }:${process.env.PORT || 3000}`
+    baseUrl: `http://${process.env.HOST || 'localhost' }:${process.env.PORT || 8080}`
   },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
