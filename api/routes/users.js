@@ -38,7 +38,7 @@ const idLength = 8;
 
 /**
  * @swagger
- * /users:
+ * /api/users:
  *   get:
  *     summary: Returns the list of all the users
  *     tags: [Users]
@@ -61,7 +61,7 @@ router.get("/", (req, res) => {
 
 /**
  * @swagger
- * /users/{id}:
+ * /api/users/{id}:
  *   get:
  *     summary: Get the user by id
  *     tags: [Users]
@@ -95,7 +95,7 @@ router.get("/:id", (req, res) => {
 
 /**
  * @swagger
- * /users:
+ * /api/users:
  *   post:
  *     summary: Create a new user
  *     tags: [Users]
@@ -133,7 +133,7 @@ router.post("/", (req, res) => {
 
 /**
  * @swagger
- * /users/{id}:
+ * /api/users/{id}:
  *  put:
  *    summary: Update the user by the id
  *    tags: [Users]
@@ -179,7 +179,7 @@ router.put("/:id", (req, res) => {
 
 /**
  * @swagger
- * /users/{id}:
+ * /api/users/{id}:
  *   delete:
  *     summary: Remove the user by id
  *     tags: [Users]
