@@ -4,7 +4,7 @@
       v-if="paginate.length > 0"
     >
     </div>
-    <div class="container">
+    <div class="container" v-cloak>
       <div class="row">
         <div class="search-wrapper panel-heading col-sm-12">
           <input class="form-control" type="text" v-on:keyup.enter="searchUsers()" v-model="searchQuery" placeholder="Search..." />
@@ -406,6 +406,14 @@ export default {
 </script>
 
 <style>
+[v-cloak] {
+  display: block;
+  padding: 50px 0;}
+@keyframes spinner {
+  to {
+    transform: rotate(360deg);
+  }
+}
 .search-wrapper {
   margin: auto;
 }
